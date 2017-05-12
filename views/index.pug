@@ -1,0 +1,29 @@
+extends layout
+
+block styles
+  link(rel='stylesheet', href='/styles/index.css')
+
+block scripts
+  script(src='/scripts/index.js')
+
+block content
+  #wrapper.row.align-items-center
+    .col-lg-8.offset-lg-2.col-xs-10.offset-xs-1
+      h4.message
+      form
+        .col-sm-8.offset-sm-2
+          .form-group
+            .input-group
+              input.form-control.form-control-lg(type='text', name='mobileNumber', placeholder='Enter Mobile Number', pattern='^[1-9][0-9]{9}$', required='')
+              span.input-group-btn
+                button#send-otp.btn.btn-primary(type='button') LOGIN
+          .form-group.otp
+            input.form-control.form-control-lg(type='text', name='otp', placeholder='Enter OTP', pattern='^[0-9]{6}$', required='')
+          .signup
+            .form-group
+              input.form-control.form-control-lg(type='text', name='name', placeholder='Full Name', pattern='^[a-zA-Z][a-zA-Z ]{3,20}$', required='')
+            .form-group
+              input.form-control.form-control-lg(type='email', name='email', placeholder='Email Address', required='')
+          .submit
+            .form-group
+              button.btn.btn-lg.btn-block.btn-primary(type='submit') SUBMIT

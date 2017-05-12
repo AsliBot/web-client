@@ -1,0 +1,36 @@
+extends layout
+
+block styles
+  link(rel='stylesheet', href='/styles/app.css')
+  link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Titillium+Web:200')
+
+block scripts
+  script(src='/scripts/app.js')
+
+block navbar
+  #navbar.collapse.navbar-collapse
+    ul.navbar-nav
+      li.nav-item
+        a.nav-link.nav-link(href='/web/app') Home
+      li.nav-item
+        a.nav-link.nav-link(href='/web/app/profile') Profile
+      li.nav-item
+        a#signout.nav-link.nav-link(href='#') SignOut
+  button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbar')
+    span.navbar-toggler-icon
+
+block content
+  br
+  #wrapper.row.align-items-center
+    .col-lg-8.offset-lg-2.col-xs-10.offset-xs-1
+      .box
+        input#speech(type='text', placeholder="Let's talk....")
+        button#rec
+          img(src='https://image.flaticon.com/icons/svg/25/25682.svg', width='30', height='30' )
+      #spokenResponse.spoken-response
+        .spoken-response__text
+  //- #wrapper
+  //-   input#speech(type='text')
+  //-   button#rec.btn Speak
+  //-   #spokenResponse.spoken-response
+  //-     .spoken-response__text

@@ -1,0 +1,34 @@
+extends layout
+
+block styles
+  link(rel='stylesheet', href='/styles/profile.css')
+
+block scripts
+  script(src='/scripts/profile.js')
+
+block navbar
+  #navbar.collapse.navbar-collapse
+    ul.navbar-nav
+      li.nav-item
+        a.nav-link.nav-link(href='/web/app') Home
+      li.nav-item
+        a.nav-link.nav-link(href='/web/app/profile') Profile
+      li.nav-item
+        a#signout.nav-link.nav-link(href='#') SignOut
+  button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbar')
+    span.navbar-toggler-icon
+
+block content
+  br
+  #wrapper.row.align-items-center
+    .col-lg-6.offset-lg-3.col-xs-10.offset-xs-1
+      .card.user-details
+        .card-block
+          h4.card-title Welcome
+            span.name
+          p.card-text Mobile Number:
+            span.mobileNumber
+          p.card-text Email:
+            span.email
+          a.card-link#updateCustomer.btn.btn-info(href='#') Update
+          a.card-link#deleteCustomer.btn.btn-danger(href='#') Delete

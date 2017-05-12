@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= 'AsliBot'
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css')
+    block styles
+
+  body
+    nav.navbar.navbar-toggleable-sm.navbar-light.bg-faded
+      a.navbar-brand(href='#')
+        img.d-inline-block.align-top(src='https://avatars0.githubusercontent.com/u/25206343?v=3&s=200', width='40', height='40', alt='AsliBot')
+        |  AsliBot
+      block navbar
+      .loader
+
+    .container
+      block content
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js')
+    script(src='/scripts/common.js')
+    block scripts

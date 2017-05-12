@@ -1,0 +1,14 @@
+{
+  "name": "web-client",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": {
+    "url": "https://github.com/AsliBot/web-client.git",
+    "type": "git"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "pug": "^2.0.0-rc.1"
+  }
+}
